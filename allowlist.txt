@@ -7,3 +7,5 @@
 # Examples:
 # C/C99/n570.c|pass
 # C/drs/dr011.c|fail
+
+C/drs/dr011.c|pass
