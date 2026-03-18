@@ -1,0 +1,9 @@
+# Curated external clang C subset allowlist
+#
+# Format:
+#   relative/path.c|pass
+#   relative/path.c|fail
+#
+# Examples:
+# C/C99/n570.c|pass
+# C/drs/dr011.c|fail
