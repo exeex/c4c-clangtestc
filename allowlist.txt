@@ -60,5 +60,6 @@ C/drs/dr259.c|pass
 C/drs/dr268.c|pass
 C/drs/dr335.c|pass
 C/drs/dr464.c|pass
+C/drs/dr466.c|pass
 C/drs/dr483.c|pass
 C/drs/dr494.c|pass
