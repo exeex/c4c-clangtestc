@@ -1,11 +1,64 @@
 # Curated external clang C subset allowlist
 #
 # Format:
-#   relative/path.c|pass
-#   relative/path.c|fail
+#   relative/path.c|pass      -- c4cll must succeed (rc=0)
+#   relative/path.c|fail      -- c4cll must fail (rc!=0)
+#   relative/path.c|verify    -- match expected-error annotations
 #
-# Examples:
-# C/C99/n570.c|pass
-# C/drs/dr011.c|fail
+# Buckets not in this file:
+#   defer -- tests with expected-error annotations whose diagnostics are
+#            too unstable or Clang-specific to verify yet (76 files)
+#
+# Phase 5 triage (2026-03-20): 144 total external C files
+#   38 added here (37 pass + 1 verify)
+#   76 deferred (expected-error annotations we can't match yet)
+#   30 not listed (positive tests our compiler fails on -- our bugs)
 
+# --- C99 ---
+C/C99/float_h-characteristics.c|pass
+C/C99/n629.c|pass
+C/C99/n782.c|pass
+C/C99/n809_2.c|pass
+C/C99/n809_3.c|pass
+C/C99/n835.c|pass
+
+# --- C11 ---
+C/C11/n1285_1.c|pass
+C/C11/n1311.c|pass
+C/C11/n1391.c|pass
+C/C11/n1396.c|pass
+C/C11/n1460.c|pass
+C/C11/n1514.c|pass
+C/C11/n1518.c|pass
+
+# --- C23 ---
+C/C23/n2549.c|pass
+C/C23/n2683_2.c|pass
+C/C23/n2900_n3011_2.c|pass
+C/C23/n2927_2.c|pass
+C/C23/n2940.c|pass
+C/C23/n3030_1.c|pass
+# verify: file has expected-error annotations and our diagnostics match
+C/C23/n2359.c|verify
+
+# --- C2y ---
+C/C2y/n3262.c|pass
+C/C2y/n3341.c|pass
+C/C2y/n3364.c|pass
+C/C2y/n3457.c|pass
+C/C2y/n3623.c|pass
+
+# --- DRs ---
 C/drs/dr011.c|pass
+C/drs/dr060.c|pass
+C/drs/dr094.c|pass
+C/drs/dr158.c|pass
+C/drs/dr206.c|pass
+C/drs/dr209.c|pass
+C/drs/dr253.c|pass
+C/drs/dr259.c|pass
+C/drs/dr268.c|pass
+C/drs/dr335.c|pass
+C/drs/dr464.c|pass
+C/drs/dr483.c|pass
+C/drs/dr494.c|pass
