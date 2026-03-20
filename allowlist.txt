@@ -33,7 +33,7 @@ C/C11/n1518.c|pass
 
 # --- C23 ---
 C/C23/n2549.c|pass
-C/C23/n2683_2.c|pass
+# C/C23/n2683_2.c|pass  -- requires stdckdint.h (C23 checked-int header we don't provide)
 C/C23/n2900_n3011_2.c|pass
 C/C23/n2927_2.c|pass
 C/C23/n2940.c|pass
